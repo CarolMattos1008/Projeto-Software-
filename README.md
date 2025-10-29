@@ -32,13 +32,13 @@ A proposta é criar um espaço digital que incentive o estudo, a colaboração e
 
 **Marina Vidigal Nevares**
 - Idade: 18 anos
-- Cidade: Barbacena - MG /Rio de Janeiro - RJ
+- Cidade: Barbacena - MG / Rio de Janeiro - RJ
 - Curso: Engenharia de Produção (Segundo período)
 
 **Vinicius Viggiani Cotrim**
-- Idade: X anos
+- Idade: 22 anos
 - Cidade: Rio de Janeiro -RJ
-- Curso: Engenharia (X período)
+- Curso: Engenharia de Produção (Terceiro período)
 
 ## 🖥️ Como usar nosso site
 
