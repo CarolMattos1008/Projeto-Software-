@@ -42,24 +42,26 @@ A proposta é criar um espaço digital que incentive o estudo, a colaboração e
 
 ## 🖥️ Como usar nosso site
 
-### 🔹 Página inicial
-A página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
+### 1. Para fazer login
+Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
 > `![Página inicial do StudyGram](./imagens/pagina_inicial.png)`
 
+### 1. Abrindo a página inicial
+Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
-### 🔹 Seção de estudos
+> `![Página inicial do StudyGram](./imagens/pagina_inicial.png)`
+
+### 2. Nossa seção de estudos
 Nesta área, os usuários podem **visualizar e compartilhar resumos**, anotações e materiais sobre diversos temas.  
 É possível filtrar conteúdos por matéria ou autor.
 
 > `![Seção de estudos](./imagens/secao_estudos.png)`
 
-
-### 🔹 Perfil do usuário
+### 3. O perfil do usuário
 Cada usuário possui um **perfil personalizado**, onde pode gerenciar suas publicações, acompanhar o progresso e interagir com outros estudantes.
 
 > `![Perfil do usuário](./imagens/perfil_usuario.png)`
-
 
 ### 🔹 Contato e redes sociais
 Na parte inferior do site há links diretos para redes sociais (como **WhatsApp** e **Instagram**), permitindo contato rápido com o grupo ou com o suporte do projeto.
