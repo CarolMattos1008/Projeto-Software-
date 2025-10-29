@@ -6,17 +6,17 @@ O **StudyGram** é uma **plataforma de _estudos_ colaborativa**, criada para fac
 O site permite que os usuários compartilhem resumos, dicas, materiais e experiências de aprendizado de forma organizada e acessível.  
 A proposta é criar um espaço digital que incentive o estudo, a colaboração e a produtividade, tornando o aprendizado mais dinâmico e interativo.  
 
-## Nossos serviços
-- Portifólio de resumos e arquivos em pdf
+##  💼 Nossos serviços
+- Portfólio de resumos e arquivos em PDF
 - Rede interativa entre estudantes
 - Videoaulas e lives explicativas
 - Chat entre estudantes
 - Sistema de curtidas
 - Links externos
 - Dicas para resolução de exercícios
-- Área para postagem de conteúdos
+- Área para postagens de conteúdos
 
-## Diferenciais
+## ✨ Diferenciais
 - Feed de estudos 
 - Comunidades 
 - Gamificação
@@ -24,20 +24,23 @@ A proposta é criar um espaço digital que incentive o estudo, a colaboração e
 - Busca inteligente 
 
 ## 👥 Componentes do grupo
-- **Carolina Moura de Mattos**
+
+**Carolina Moura de Mattos**
 - Idade: 19 anos
 - Cidade: Rio de Janeiro - RJ
 - Curso: Engenharia de Produção (Segundo período)
-- **Marina Vidigal Nevares**
+
+**Marina Vidigal Nevares**
 - Idade: 18 anos
 - Cidade: Barbacena - MG /Rio de Janeiro - RJ
 - Curso: Engenharia de Produção (Segundo período)
-- **Vinicius Viggiani Cotrim**
+
+**Vinicius Viggiani Cotrim**
 - Idade: X anos
 - Cidade: Rio de Janeiro -RJ
 - Curso: Engenharia (X período)
 
-## 🖥️ Como usar o site
+## 🖥️ Como usar nosso site
 
 ### 🔹 Página inicial
 A página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
