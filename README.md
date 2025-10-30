@@ -56,7 +56,7 @@ Nossa página inicial apresenta o **menu principal** e uma visão geral do Study
 Nesta área, os usuários podem **visualizar e compartilhar resumos**, anotações e materiais sobre diversos temas.  
 É possível filtrar conteúdos por matéria ou autor.
 
-> ![Seção de estudos]((https://github.com/mvnevares/Atividade-1/blob/main/IMG_1643.jpeg?raw=true)
+> ![Seção de estudos](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1643.jpeg?raw=true)
 
 ### 3. Contato e redes sociais
 Na parte inferior do site há links diretos para redes sociais (como **WhatsApp** e **Instagram**), permitindo contato rápido com o grupo ou com o suporte do projeto.
