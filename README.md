@@ -45,27 +45,22 @@ A proposta é criar um espaço digital que incentive o estudo, a colaboração e
 ### 1. Para fazer login
 Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
-> ![Tela inicial do StudyGram](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true)
+> ![Login do StudyGram](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1642.jpeg?raw=true)
 
 ### 1. Abrindo a página inicial
 Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
-> ([./imagens/TelaStudyGram.png](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true))
+> ![Tela inicial do StudyGram](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true)
 
 ### 2. Nossa seção de estudos
 Nesta área, os usuários podem **visualizar e compartilhar resumos**, anotações e materiais sobre diversos temas.  
 É possível filtrar conteúdos por matéria ou autor.
 
-> `![Seção de estudos](./imagens/secao_estudos.png)`
+> ![Seção de estudos]((https://github.com/mvnevares/Atividade-1/blob/main/IMG_1643.jpeg?raw=true)
 
-### 3. O perfil do usuário
-Cada usuário possui um **perfil personalizado**, onde pode gerenciar suas publicações, acompanhar o progresso e interagir com outros estudantes.
-
-> `![Perfil do usuário](./imagens/perfil_usuario.png)`
-
-### 🔹 Contato e redes sociais
+### 3. Contato e redes sociais
 Na parte inferior do site há links diretos para redes sociais (como **WhatsApp** e **Instagram**), permitindo contato rápido com o grupo ou com o suporte do projeto.
-> `![Rodapé com redes sociais](./imagens/rodape.png)`
+> ![Rodapé com redes sociais](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1644.jpeg?raw=true)`
 
 © 2025 StudyGram — Todos os direitos reservados.
 
