@@ -45,12 +45,12 @@ A proposta é criar um espaço digital que incentive o estudo, a colaboração e
 ### 1. Para fazer login
 Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
-> (./imagens/TelaStudyGram.png)
+> ([./imagens/TelaStudyGram.png](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true))
 
 ### 1. Abrindo a página inicial
 Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
-> (./imagens/TelaStudyGram.png)
+> ([./imagens/TelaStudyGram.png](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true))
 
 ### 2. Nossa seção de estudos
 Nesta área, os usuários podem **visualizar e compartilhar resumos**, anotações e materiais sobre diversos temas.  
