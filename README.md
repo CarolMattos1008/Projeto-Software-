@@ -47,18 +47,18 @@ Nossa página inicial apresenta o **menu principal** e uma visão geral do Study
 
 > ![Login do StudyGram](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1642.jpeg?raw=true)
 
-### 1. Abrindo a página inicial
+### 2. Abrindo a página inicial
 Nossa página inicial apresenta o **menu principal** e uma visão geral do StudyGram, com acesso rápido às seções de estudos, perfis e recursos.
 
 > ![Tela inicial do StudyGram](https://github.com/mvnevares/Atividade-1/blob/main/Tela%20StudyGram.png?raw=true)
 
-### 2. Nossa seção de estudos
+### 3. Nossa seção de estudos
 Nesta área, os usuários podem **visualizar e compartilhar resumos**, anotações e materiais sobre diversos temas.  
 É possível filtrar conteúdos por matéria ou autor.
 
 > ![Seção de estudos](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1643.jpeg?raw=true)
 
-### 3. Contato e redes sociais
+### 4. Contato e redes sociais
 Na parte inferior do site há links diretos para redes sociais (como **WhatsApp** e **Instagram**), permitindo contato rápido com o grupo ou com o suporte do projeto.
 > ![Rodapé com redes sociais](https://github.com/mvnevares/Atividade-1/blob/main/IMG_1644.jpeg?raw=true)`
 
