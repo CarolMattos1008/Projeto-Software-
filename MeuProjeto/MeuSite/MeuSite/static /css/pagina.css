@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #c9dff0;
+}
+
+.left-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 40px;
+  background-color: #bcd6e6;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.buttons .btn {
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.btn.login {
+  background-color: #24246c;
+}
+
+.btn.signup {
+  background-color: #3535a3;
+}
+
+.content {
+  text-align: left;
+}
+
+.content h2 {
+  font-size: 26px;
+  color: #0b203a;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.content h2 span {
+  color: #1b3f68;
+  font-weight: 600;
+}
+
+.app-image {
+  width: 180px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+}
+
+.feature img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.contact {
+  color: #0b203a;
+  text-decoration: none;
+}
+
+.whatsapp {
+  color: #000000;
+}
+
+.instagram {
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact {
+  text-decoration: none;
+  color: #0b203a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+}
+
+.icon {
+  width: 22px;   /* ajusta o tamanho do ícone */
+  height: 22px;
+}
