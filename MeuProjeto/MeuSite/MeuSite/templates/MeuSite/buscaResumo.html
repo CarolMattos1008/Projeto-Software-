@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Resumo</title>
+</head>
+<body>
+    <h1>Busca de Resumo (StudyGram)</h1>
+
+    <form action="{% url 'meu_site:resultado-busca' %}" method="get">
+        Título: <input type="text" name="titulo" id="titulo">
+        <button type="submit">Busca</button>
+    </form>
+</body>
+</html>
