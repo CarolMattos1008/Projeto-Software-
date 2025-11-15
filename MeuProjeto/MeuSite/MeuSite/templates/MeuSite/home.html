@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-BR">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudyGram</title>
-  <link rel="stylesheet" href="css/pagina.css">
+  <link rel="stylesheet" href="{% static 'css/pagina.css' %}">
 </head>
 <body>
   <div class="left-section">
     <div class="top-bar">
-      <img src="img/logo.png" alt="Logo StudyGram" class="logo">
+      <img src="{% static 'img/logo.png' %}" alt="Logo StudyGram" class="logo">
       <div class="buttons">
-        <button class="btn login">Entrar</button>
-        <button class="btn signup">Criar conta</button>
+        <a href="{% url 'login' %}" class="btn">Entrar</a>
+        <a href="{% url 'signup' %}" class="btn signup">Criar conta</a>
       </div>
     </div>
 
@@ -21,19 +22,19 @@
 
       <div class="features">
         <div class="feature">
-          <img src="img/resumo.png" alt="Postar Resumos">
+          <img src="{% static 'img/resumo.png' %}" alt="Postar Resumos">
           <p>Postar resumos</p>
         </div>
         <div class="feature">
-          <img src="img/video.jpg" alt="Compartilhar vídeos">
+          <img src="{% static 'img/video.jpg' %}" alt="Compartilhar vídeos">
           <p>Compartilhar vídeos</p>
         </div>
         <div class="feature">
-          <img src="img/grupo.png" alt="Criar grupos de estudo">
+          <img src="{% static 'img/grupo.png' %}" alt="Criar grupos de estudo">
           <p>Criar grupos de estudo</p>
         </div>
         <div class="feature">
-          <img src="img/batalha.jpg" alt="Batalhas de resumos">
+          <img src="{% static 'img/batalha.jpg' %}" alt="Batalhas de resumos">
           <p>Batalhas de resumos</p>
         </div>
       </div>
@@ -41,10 +42,10 @@
 
     <div class="footer">
   <a href="#" class="contact">
-    <img src="img/wpp.png" alt="WhatsApp" class="icon"> Contato
+    <img src="{% static 'img/wpp.png' %}" alt="WhatsApp" class="icon"> Contato
   </a>
   <a href="#" class="contact">
-    <img src="img/instagram.png" alt="Instagram" class="icon"> Redes Sociais
+    <img src="{% static 'img/instagram.png' %}" alt="Instagram" class="icon"> Redes Sociais
   </a>
   <a href="#" class="contact">Termos de Uso</a>
 </div>

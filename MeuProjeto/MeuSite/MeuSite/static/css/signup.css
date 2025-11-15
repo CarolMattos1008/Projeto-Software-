@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 241, 237); /* mesmo fundo da logo */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 140px; /* mesmo tamanho do login */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    width: 360px;   /* maior porque cadastro usa mais campos */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1b4f9c;
+}
+
+.subtitle {
+    color: #6d6d6d;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #bfcbe0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 4px rgba(74,144,226,0.4);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+.back-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+a {
+    color: #1b4f9c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de erro e sucesso */
+.error {
+    color: #c0392b;
+    background: #f9d6d5;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #1e824c;
+    background: #d4f8df;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}

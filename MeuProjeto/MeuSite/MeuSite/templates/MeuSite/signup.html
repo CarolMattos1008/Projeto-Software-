@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studygram - Criar Conta</title>
+
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+<img src="{% static 'img/logo.png' %}" alt="Logo Studygram" class="logo">
+
+
+<div class="card">
+<h2>Criar Conta</h2>
+<p class="subtitle">Junte-se a nós e comece a estudar em grupo!</p>
+
+{% if error %}
+  <p class="error">{{ error }}</p>
+{% endif %}
+
+{% if messages %}
+  {% for message in messages %}
+    <p class="success">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+<form method="post" action="{% url 'signup' %}">
+{% csrf_token %}
+
+<div class="form-group">
+  <label for="username">Usuário:</label>
+  <input type="text" id="username" name="username" placeholder="Escolha um usuário" required>
+</div>
+
+<div class="form-group">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+</div>
+
+<div class="form-group">
+  <label for="password">Senha:</label>
+  <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required>
+</div>
+
+<div class="form-group">
+  <label for="password_confirm">Confirmar Senha:</label>
+  <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirme sua senha" required>
+</div>
+
+<button type="submit">Finalizar</button>
+
+</form>
+
+<div class="back-link">
+Já tem uma conta? <a href="{% url 'login' %}">Faça login</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
