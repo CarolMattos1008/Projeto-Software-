@@ -1,24 +1,21 @@
-<<<<<<< HEAD
+# --- IMPORTS COMBINADOS DE AMBAS AS VERSÕES ---
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
-from django.contrib import messages
-=======
-from django.shortcuts import render
 from .models import Resumo
 from django.db.models import Q 
 from django.views.generic.base import View
->>>>>>> 32d5fe0b6101f45bd554a29bac563782584a286a
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.models import User # (Usado pela sua colega)
+from django.contrib import messages
 
+# --- FUNÇÃO HOME (COMUM) ---
 def home(request):
     '''
     View function for home page of site.
     Renders the home.html template.
     '''
     return render(request, 'MeuSite/home.html')
-<<<<<<< HEAD
     
-
 def login_view(request):
     '''
     View function for login page.
@@ -72,14 +69,20 @@ def signup_view(request):
         return redirect('login')
 
     return render(request, 'MeuSite/signup.html')
-=======
+
 
 class ResumoListView(View):
 
     def get(self, request, *args, **kwargs):
         resumos = Resumo.objects.all().order_by('-data_criacao')
-        contexto = {'pessoas': resumos}        
+        contexto = {'pessoas': resumos}       
         return render(request, 'MeuSite/listaResumos.html', contexto)
+    
+def buscarResumo(request):
+    """
+    Renderiza o template que contém o formulário de busca (buscaResumo.html)
+    """
+    return render(request, 'MeuSite/buscaResumo.html')
     
 def resultadoBusca(request):
     titulo_busca = request.GET.get('titulo')
@@ -90,4 +93,48 @@ def resultadoBusca(request):
         
     contexto = {'pessoas': resumos}
     return render(request, 'MeuSite/listaResumos.html', contexto)
->>>>>>> 32d5fe0b6101f45bd554a29bac563782584a286a
+
+def view_login(request):
+    # Se o usuário já está logado, redireciona para a home
+    if request.user.is_authenticated:
+        return redirect('home')
+
+    # Se o formulário foi enviado (método POST)
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+
+            # Se o usuário existir e a senha estiver correta
+            if user is not None:
+                login(request, user)
+                messages.success(request, f"Bem-vindo(a) de volta, {username}!")
+                return redirect('home') # Redireciona para a Home
+            else:
+                messages.error(request, "Usuário ou senha inválidos.")
+        else:
+            messages.error(request, "Usuário ou senha inválidos.")
+
+    # Se o usuário está apenas acessando a página (método GET)
+    form = AuthenticationForm()
+    # Renderiza o template de login (que sua equipe 'fez')
+    return render(request, 'MeuSite/login.html', {'form': form})
+
+def view_cadastro(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save() # Salva o novo usuário no banco de dados
+            messages.success(request, "Cadastro realizado com sucesso! Faça o login.")
+            return redirect('login') # Redireciona para o Login
+        else:
+            messages.error(request, "Não foi possível realizar o cadastro. Verifique os erros.")
+
+    form = UserCreationForm()
+
+    return render(request, 'MeuSite/cadastro.html', {'form': form})
