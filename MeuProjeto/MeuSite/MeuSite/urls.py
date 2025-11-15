@@ -25,7 +25,6 @@ from MeuSite import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.home, name='home'),
-    path('app/', include('MeuSite.urls')),
 ]
 
 if settings.DEBUG:
