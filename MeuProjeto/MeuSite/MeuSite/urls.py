@@ -6,11 +6,9 @@ from MeuSite import views
 from MeuSite.views import ResumoListView, buscarResumo, resultadoBusca, view_login, view_cadastro
 
 urlpatterns = [
-    # Rotas Principais
+    # Rotas Principais (Comuns)
     path("admin/", admin.site.urls),
     path('', views.home, name='home'),
-
-    # TAREFAS (Adicionadas diretamente aqui, sem 'include')
     path('app/resumos/', ResumoListView.as_view(), name='lista-resumos'),
     path('app/buscar/', buscarResumo, name='buscar-resumo'),
     path('app/resultado-busca/', resultadoBusca, name='resultado-busca'),

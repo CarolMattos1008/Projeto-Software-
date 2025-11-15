@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 241, 237); /* fundo da logo */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ← CENTRALIZA DE VERDADE */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 140px; /* maior */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    width: 340px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.subtitle {
+    color: #6d6d6d;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #bfcbe0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 4px rgba(74,144,226,0.4);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+a {
+    color: #1b4f9c;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}

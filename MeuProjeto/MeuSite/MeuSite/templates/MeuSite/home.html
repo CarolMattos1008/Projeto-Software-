@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudyGram</title>
@@ -12,8 +12,8 @@
     <div class="top-bar">
       <img src="{% static 'img/logo.png' %}" alt="Logo StudyGram" class="logo">
       <div class="buttons">
-        <button class="btn login">Entrar</button>
-        <button class="btn signup">Criar conta</button>
+        <a href="{% url 'login' %}" class="btn">Entrar</a>
+        <a href="{% url 'signup' %}" class="btn signup">Criar conta</a>
       </div>
     </div>
 
