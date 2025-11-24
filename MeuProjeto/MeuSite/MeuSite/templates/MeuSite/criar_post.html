@@ -1,0 +1,12 @@
+{% extends 'MeuSite/base.html' %}
+{% block title %}Novo Resumo - StudyGram{% endblock %}
+
+{% block content %}
+    <h2>Publicar Novo Resumo</h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publicar</button>
+    </form>
+{% endblock %}

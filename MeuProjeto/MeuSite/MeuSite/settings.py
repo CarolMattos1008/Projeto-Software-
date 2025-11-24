@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings...
 SECRET_KEY = "django-insecure-ukgnxo3!wlufbhxnk!f4s%p$x*!@&_!^$uo$*u*pf*81=w+*zi"
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,5 +90,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',      # <-- Essa é a que o erro pediu especificamente
+    'http://localhost:8000',       # Por garantia
+    'http://127.0.0.1:8000',       # Por garantia
+    'https://spidery-crypt-69779pgx7ppq25vvr-8000.app.github.dev'# Se quiser, adicione o seu link https://...github.dev aqui também
+]

@@ -5,16 +5,17 @@ from django.db.models import Q
 from django.views.generic.base import View
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User # (Usado pela sua colega)
+from django.contrib.auth.models import User 
 from django.contrib import messages
+from .forms import PostForm
+from .models import Post
+from django.contrib.auth.decorators import login_required
 
 # --- FUNÇÃO HOME (COMUM) ---
 def home(request):
-    '''
-    View function for home page of site.
-    Renders the home.html template.
-    '''
-    return render(request, 'MeuSite/home.html')
+    # Busca todos os posts, do mais recente para o mais antigo
+    posts = Post.objects.all().order_by('-data_criacao')
+    return render(request, 'MeuSite/home.html', {'posts': posts})
     
 def login_view(request):
     '''
@@ -138,3 +139,19 @@ def view_cadastro(request):
     form = UserCreationForm()
 
     return render(request, 'MeuSite/cadastro.html', {'form': form})
+
+@login_required(login_url='login') # Garante que só quem está logado pode postar
+def criar_post(request):
+    if request.method == 'POST':
+        # request.FILES é necessário para upload de imagens
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False) # Cria o objeto mas não salva ainda
+            post.autor = request.user      # Preenche o autor com o usuário logado
+            post.save()                    # Agora salva no banco
+            messages.success(request, "Resumo postado com sucesso!")
+            return redirect('home')
+    else:
+        form = PostForm()
+    
+    return render(request, 'MeuSite/criar_post.html', {'form': form})
