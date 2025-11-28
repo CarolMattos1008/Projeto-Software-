@@ -1,55 +1,44 @@
+{% extends 'MeuSite/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyGram</title>
-  <link rel="stylesheet" href="{% static 'css/pagina.css' %}">
-</head>
-<body>
-  <div class="left-section">
-    <div class="top-bar">
-      <img src="{% static 'img/logo.png' %}" alt="Logo StudyGram" class="logo">
-      <div class="buttons">
-        <a href="{% url 'login' %}" class="btn">Entrar</a>
-        <a href="{% url 'signup' %}" class="btn signup">Criar conta</a>
-      </div>
+
+{% block title %}Home - StudyGram{% endblock %}
+
+{% block content %}
+    <div class="welcome-section" style="text-align: center; margin-bottom: 20px;">
+        <h2>Troque Conteúdos, Estude em grupo e evolua com o <span style="color: #4CAF50;">StudyGram</span></h2>
     </div>
 
-    <div class="content">
-      <h2>Troque Conteúdos, Estude em grupo e evolua com o <span>StudyGram</span></h2>
+    {% if user.is_authenticated %}
+        <div style="margin-bottom: 20px; text-align: center;">
+            <a href="{% url 'criar_post' %}" class="btn" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                📢 Postar Novo Resumo
+            </a>
+        </div>
+    {% endif %}
 
-      <div class="features">
-        <div class="feature">
-          <img src="{% static 'img/resumo.png' %}" alt="Postar Resumos">
-          <p>Postar resumos</p>
-        </div>
-        <div class="feature">
-          <img src="{% static 'img/video.jpg' %}" alt="Compartilhar vídeos">
-          <p>Compartilhar vídeos</p>
-        </div>
-        <div class="feature">
-          <img src="{% static 'img/grupo.png' %}" alt="Criar grupos de estudo">
-          <p>Criar grupos de estudo</p>
-        </div>
-        <div class="feature">
-          <img src="{% static 'img/batalha.jpg' %}" alt="Batalhas de resumos">
-          <p>Batalhas de resumos</p>
-        </div>
-      </div>
+    <div class="feed-container" style="max-width: 800px; margin: 0 auto;">
+        {% for post in posts %}
+            <div class="post-card" style="border: 1px solid #ddd; background-color: white; margin-bottom: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                
+                <h3 style="margin-top: 0; color: #333;">{{ post.titulo }}</h3>
+                <p style="font-size: 0.9em; color: #666;">
+                    <strong>Autor:</strong> {{ post.autor.username }} | 
+                    <strong>Data:</strong> {{ post.data_criacao|date:"d/m/Y H:i" }}
+                </p>
+                
+                {% if post.imagem %}
+                    <div style="text-align: center; margin: 10px 0;">
+                        <img src="{{ post.imagem.url }}" alt="Imagem do resumo" style="max-width: 100%; height: auto; border-radius: 4px;">
+                    </div>
+                {% endif %}
+                
+                <p>{{ post.conteudo }}</p>
+            </div>
+        
+        {% empty %}
+            <div style="text-align: center; padding: 40px; background-color: #f9f9f9; border-radius: 8px;">
+                <p>Ainda não há resumos. Seja o primeiro a postar!</p>
+            </div>
+        {% endfor %}
     </div>
-
-    <div class="footer">
-      <a href="#" class="contact">
-        <img src="{% static 'img/wpp.png' %}" alt="WhatsApp" class="icon"> Contato
-      </a>
-      <a href="#" class="contact">
-        <img src="{% static 'img/instagram.png' %}" alt="Instagram" class="icon"> Redes Sociais
-      </a>
-      <a href="#" class="contact">Termos de Uso</a>
-    </div>
-
-  </div>
-</body>
-</html>
+{% endblock %}

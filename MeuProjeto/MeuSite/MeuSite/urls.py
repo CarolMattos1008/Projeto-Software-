@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import path
 from MeuSite import views 
 from MeuSite.views import ResumoListView, buscarResumo, resultadoBusca, view_login, view_cadastro
+from MeuSite.views import criar_post
 
 urlpatterns = [
     # Rotas Principais (Comuns)
@@ -14,6 +15,7 @@ urlpatterns = [
     path('app/resultado-busca/', resultadoBusca, name='resultado-busca'),
     path('login/', view_login, name='login'),
     path('cadastro/', view_cadastro, name='cadastro'),
+    path('criar-post/', criar_post, name='criar_post'),
 ]
 
 if settings.DEBUG:

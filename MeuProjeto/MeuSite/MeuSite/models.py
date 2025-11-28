@@ -42,3 +42,13 @@ class Material(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+class Post(models.Model):
+    autor = models.ForeignKey(User, on_delete=models.CASCADE) # Relaciona o post ao usuário que criou
+    titulo = models.CharField(max_length=200)
+    conteudo = models.TextField(verbose_name="Conteúdo do Resumo")
+    imagem = models.ImageField(upload_to='posts_img/', blank=True, null=True) # Requer Pillow
+    data_criacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.titulo} por {self.autor.username}"
